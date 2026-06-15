@@ -196,33 +196,16 @@ export default function AdminPage() {
         <p>Verifying Admin session...</p>
       </div>
 
-      {/* Admin overview cards (glassmorphism) */}
-      <section style={{ marginBottom: '2rem' }}>
-        <div className="grid grid-4">
-          <div className="card" style={{ textAlign: 'center' }}>
-            <p style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--primary)', marginBottom: '0.25rem' }}>{ordersTodayCount}</p>
-            <p style={{ color: 'var(--text-secondary)' }}>Orders Today</p>
-          </div>
-
-          <div className="card" style={{ textAlign: 'center' }}>
-            <p style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--secondary)', marginBottom: '0.25rem' }}>{upcomingShipments}</p>
-            <p style={{ color: 'var(--text-secondary)' }}>Upcoming Shipments</p>
-          </div>
-
-          <div className="card" style={{ textAlign: 'center' }}>
-            <p style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--success)', marginBottom: '0.25rem' }}>{completedOrders}</p>
-            <p style={{ color: 'var(--text-secondary)' }}>Completed Orders</p>
-          </div>
-
-          <div className="card" style={{ textAlign: 'center' }}>
-            <p style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--primary)', marginBottom: '0.25rem' }}>₹{(revenue || 0).toLocaleString()}</p>
-            <p style={{ color: 'var(--text-secondary)' }}>Revenue</p>
-          </div>
-        </div>
-      </section>
-    );
-  }
-
+    if (authLoading || (loadingData && products.length === 0)) {
+  return (
+    <div
+      className="container flex justify-center align-center"
+      style={{ minHeight: '60vh' }}
+    >
+      <p>Verifying Admin session...</p>
+    </div>
+  );
+}
   if (!user || user.role !== 'admin') {
     return (
       <div className="container flex flex-col align-center justify-center" style={{ minHeight: '60vh', textAlign: 'center', gap: '1.5rem' }}>
