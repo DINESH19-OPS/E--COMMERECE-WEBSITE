@@ -188,15 +188,9 @@ export default function AdminPage() {
 
   const completedOrders = orders.filter(o => o.status === 'delivered').length;
 
-  const revenue = orders.reduce((sum, o) => sum + (Number(o.totalAmount) || 0), 0);
+ const revenue = orders.reduce((sum, o) => sum + (Number(o.totalAmount) || 0), 0);
 
-  if (authLoading || (loadingData && products.length === 0)) {
-    return (
-      <div className="container flex justify-center align-center" style={{ minHeight: '60vh' }}>
-        <p>Verifying Admin session...</p>
-      </div>
-
-    if (authLoading || (loadingData && products.length === 0)) {
+if (authLoading || (loadingData && products.length === 0)) {
   return (
     <div
       className="container flex justify-center align-center"
@@ -206,27 +200,49 @@ export default function AdminPage() {
     </div>
   );
 }
-  if (!user || user.role !== 'admin') {
-    return (
-      <div className="container flex flex-col align-center justify-center" style={{ minHeight: '60vh', textAlign: 'center', gap: '1.5rem' }}>
-        <div style={{ padding: '1rem', backgroundColor: 'var(--error-bg)', borderRadius: '50%', color: 'var(--error)', display: 'inline-flex' }}>
-          <AlertCircle size={36} />
-        </div>
-        <div>
-          <h2 style={{ fontSize: '1.5rem', fontWeight: 700 }}>Access Forbidden</h2>
-          <p style={{ color: 'var(--text-secondary)', marginTop: '0.25rem' }}>
-            Only store administrators can access the admin dashboard.
-          </p>
-        </div>
-        <Link href="/login" className="btn btn-primary btn-sm">
-          Log In as Admin
-        </Link>
-      </div>
-    );
-  }
 
+if (!user || user.role !== 'admin') {
   return (
-    <div className="container" style={{ paddingTop: '3rem' }}>
+    <div
+      className="container flex flex-col align-center justify-center"
+      style={{ minHeight: '60vh', textAlign: 'center', gap: '1.5rem' }}
+    >
+      <div
+        style={{
+          padding: '1rem',
+          backgroundColor: 'var(--error-bg)',
+          borderRadius: '50%',
+          color: 'var(--error)',
+          display: 'inline-flex'
+        }}
+      >
+        <AlertCircle size={36} />
+      </div>
+
+      <div>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 700 }}>
+          Access Forbidden
+        </h2>
+
+        <p
+          style={{
+            color: 'var(--text-secondary)',
+            marginTop: '0.25rem'
+          }}
+        >
+          Only store administrators can access the admin dashboard.
+        </p>
+      </div>
+
+      <Link href="/login" className="btn btn-primary btn-sm">
+        Log In as Admin
+      </Link>
+    </div>
+  );
+}
+
+return (
+  <div className="container" style={{ paddingTop: '3rem' }}>
       
       <div className="flex justify-between align-center" style={{ marginBottom: '2.5rem' }}>
         <div>
