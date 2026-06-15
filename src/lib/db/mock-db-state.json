@@ -1,0 +1,83 @@
+{
+  "users": [
+    {
+      "name": "Customer One",
+      "email": "customer1@voltstore.com",
+      "password": "$2b$10$htXGAwamPh5B5ZgExZ9A7eSszxj.YL2MhVPFKHiAmr.8qvkDQGNyi",
+      "role": "user",
+      "_id": "u_xre4hgj9m",
+      "createdAt": "2026-06-13T15:28:53.710Z"
+    },
+    {
+      "name": "hari",
+      "email": "hariliney08@gmail.com",
+      "password": "$2b$10$5.YjDe.Z7agq7A1y0KCUBOnWWzRTVG3I4J31tn7OxtwHfF7UW83fy",
+      "role": "user",
+      "_id": "u_q16amfyxr",
+      "createdAt": "2026-06-14T14:07:42.429Z"
+    }
+  ],
+  "products": [
+    {
+      "_id": "p1",
+      "name": "Nebula Mechanical Keyboard",
+      "description": "Compact 75% mechanical keyboard featuring hot-swappable tactile switches, frosted polycarbonate body, and custom glowing RGB layouts.",
+      "price": 189,
+      "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&q=80&w=600",
+      "category": "peripherals",
+      "stock": 12,
+      "createdAt": "2026-01-01T12:00:00.000Z"
+    },
+    {
+      "_id": "p2",
+      "name": "Precision Ergonomic Mouse",
+      "description": "Wireless precision mouse with hyper-fast scrolling, adjustable 20K DPI sensor, and contoured ergonomic thumb rests.",
+      "price": 99,
+      "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&q=80&w=600",
+      "category": "peripherals",
+      "stock": 25,
+      "createdAt": "2026-01-02T12:00:00.000Z"
+    },
+    {
+      "_id": "p3",
+      "name": "Cyberpunk Desk Mat",
+      "description": "Extra large water-resistant micro-woven mousepad with stitched glowing LED edges and neon futuristic detailing.",
+      "price": 39,
+      "image": "https://images.unsplash.com/photo-1616440347437-b1c73416efc2?auto=format&fit=crop&q=80&w=600",
+      "category": "desk-setup",
+      "stock": 40,
+      "createdAt": "2026-01-03T12:00:00.000Z"
+    },
+    {
+      "_id": "p4",
+      "name": "SonicWave ANC Headphones",
+      "description": "Over-ear noise-cancelling headphones featuring studio-grade spatial audio, hi-res drivers, and up to 45 hours of playback time.",
+      "price": 299,
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=600",
+      "category": "audio",
+      "stock": 8,
+      "createdAt": "2026-01-04T12:00:00.000Z"
+    },
+    {
+      "_id": "p5",
+      "name": "Aura Smart Ambient Lightbars",
+      "description": "Dual-pack smart RGB lightbars syncing dynamically with screen colors and audio output, controllable via mobile app.",
+      "price": 79,
+      "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&q=80&w=600",
+      "category": "desk-setup",
+      "stock": 18,
+      "createdAt": "2026-01-05T12:00:00.000Z"
+    },
+    {
+      "_id": "p6",
+      "name": "Horizon Ultrawide Curved Monitor",
+      "description": "34-inch curved gaming display with 144Hz refresh rate, HDR10 capabilities, and a sleek modern bezel-less border.",
+      "price": 549,
+      "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&q=80&w=600",
+      "category": "displays",
+      "stock": 5,
+      "createdAt": "2026-01-06T12:00:00.000Z"
+    }
+  ],
+  "orders": []
+}
